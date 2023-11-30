@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}Jokes Page{% endblock %}
+{% block content %}
+<h1 class="random">Random Joke:</h1>
+<p id="jokes">{{ joke }}</p>
+
+<button onclick="generatejoke()" >Generate A New Joke</button>
+
+<script>
+    function generatejoke() {
+        fetch('/newjoke')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('jokes').innerText = data;
+        })
+    }
+</script>
+{% endblock %}

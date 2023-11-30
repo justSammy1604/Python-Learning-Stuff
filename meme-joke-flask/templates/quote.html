@@ -1,0 +1,35 @@
+{% extends 'layout.html'%}
+{% block title %}Quote Page{% endblock %}
+{% block content %}
+<style>
+    h1{
+         text-align: center;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #000000;
+    }
+    p{
+        text-align: center;
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: normal;
+            color: #ffffff;
+            background-color: #000000;
+    }
+</style>
+<h1>Random Quote:</h1>
+<p id="quote">{{quote}}</p>
+<p id="author">{{author}}</p>
+<!-- <button onclick = "get_random()">Get New Quote</button>-->
+<!-- <button onclick="generatequote()">Generate A New Quote</button>
+<script>
+    function generatequote() {
+        fetch('/newquote')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('quote').innerText = data;
+        })
+    }
+</script> -->
+{% endblock %}
