@@ -5,7 +5,6 @@ from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 device = torch.device('cuda:0')
-
 # 0 prepare data
 bc = datasets.load_breast_cancer()
 X, y = bc.data, bc.target
@@ -33,32 +32,25 @@ y_train = y_train.to(device)
 y_test = y_test.to(device)
 
 # 1 model
-class NeuralNet(nn.Module):
-    def __init__(self, n_input_features):
-        super(NeuralNet, self).__init__()
-        self.linear = nn.Linear(n_input_features, 5)
-        self.linear2 = nn.Linear(5, 3)
-        self.linear3 = nn.Linear(3, 1)
-        self.relu = nn.ReLU()
-        self.sigmoid = nn.Sigmoid()
-
+class LogisticRegress(nn.Module):
+    def __init__(self,n_input_features):
+        super(LogisticRegress, self).__init__()
+        self.linear = nn.Linear(n_input_features, 1)
+        
     def forward(self, x):
-        x = self.relu(self.linear(x))
-        x = self.relu(self.linear2(x))
-        x = self.sigmoid(self.linear3(x))
-        return x
-    
-model = NeuralNet(n_features)
-model = model.to(device)
+        y_predicted = torch.sigmoid(self.linear(x))
+        return y_predicted
 
+
+model = LogisticRegress(n_features)
+model = model.to(device)
 # 2 loss and optimizer
 loss = torch.nn.BCELoss()
 
-optim = torch.optim.Adam(model.parameters(), lr=0.001)
+optim = torch.optim.SGD(model.parameters(), lr=0.01)
 
 # 3 training loop
 num_epochs = 1000
-
 for epoch in range(num_epochs):
     # forward pass and loss
     y_predicted = model(X_train)
@@ -80,4 +72,4 @@ with torch.no_grad():
     y_predicted = model(X_test)
     y_predicted_cls = y_predicted.round()
     acc = y_predicted_cls.eq(y_test).sum() / float(y_test.shape[0])
-    print(f'accuracy = {acc:.4f}') 
+    print(f'accuracy = {acc:.4f}')
