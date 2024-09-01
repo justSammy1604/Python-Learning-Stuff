@@ -1,0 +1,1 @@
+Just the basics of flask in a small app that displays jokes and a quote. 
