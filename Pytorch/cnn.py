@@ -6,7 +6,7 @@ import torchvision
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
-// Adding GPU usage 
+# Adding GPU usage 
 device = torch.device('cuda:0')
 
 # 0 prepare data
