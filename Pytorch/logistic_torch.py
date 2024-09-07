@@ -42,6 +42,7 @@ class LogisticRegress(nn.Module):
         return y_predicted
 
 
+# Model defined below
 model = LogisticRegress(n_features)
 model = model.to(device)
 # 2 loss and optimizer
