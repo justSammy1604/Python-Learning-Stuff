@@ -12,7 +12,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 from sklearn import datasets
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 
 # 0 prepare data
 
