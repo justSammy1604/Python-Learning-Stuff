@@ -3,7 +3,7 @@ import torch.nn as nn
 import numpy as np
 from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split 
 device = torch.device('cuda:0')
 
 # 0 prepare data
