@@ -10,7 +10,7 @@ device = torch.device('cuda:0')
 
 num_epochs = 5
 batch_size = 10
-learning_rate = 0.03
+learning_rate = 0.03 
 
 transform = transforms.Compose(
     [transforms.ToTensor(),
