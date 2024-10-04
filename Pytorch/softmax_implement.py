@@ -16,7 +16,7 @@ print(f'Softmax numpy: {output}')
 x = torch.tensor([2.0, 1.5, 0.8])
 output = torch.softmax(x, dim=0)
 
-print(f'Softmax torch: {output}')
+print(f'Softmax torch: {output}') 
 
 # CrossEntropyLoss
 
