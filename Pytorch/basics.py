@@ -3,7 +3,7 @@
 import torch as tor 
 device = tor.device('cuda:0')
 X = tor.tensor([1,2,3,4,5], dtype=tor.float32)
-Y = tor.tensor([2,4,6,8,10], dtype=tor.float32)
+Y = tor.tensor([2,4,6,8,10], dtype=tor.float32) 
 
 w = tor.tensor(0.0, dtype=tor.float32, requires_grad=True) 
  
