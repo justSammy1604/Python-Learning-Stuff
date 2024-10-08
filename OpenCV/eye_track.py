@@ -1,13 +1,13 @@
 import cv2
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox 
 
 # Load the required trained XML classifiers for face and eyes
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 # Capture frames from the default camera
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) 
 
 # Function to display a pop-up message
 def show_popup():
