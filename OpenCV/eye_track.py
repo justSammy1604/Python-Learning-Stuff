@@ -11,7 +11,7 @@ cap = cv2.VideoCapture(0)
 
 # Function to display a pop-up message
 def show_popup():
-    # Create a tkinter root window and hide it
+    # Create a tkinter root window and hide it 
     root = tk.Tk()
     root.withdraw()  # Hide the main window
     messagebox.showwarning("Alert", "Please focus your eyes on the screen!")
