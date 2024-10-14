@@ -1,4 +1,4 @@
-import cv2
+import cv2 
 import tkinter as tk
 from tkinter import messagebox  
 
@@ -14,7 +14,7 @@ def show_popup():
     # Create a tkinter root window and hide it 
     root = tk.Tk()
     root.withdraw()  # Hide the main window
-    messagebox.showwarning("Alert", "Please focus your eyes on the screen!")
+    messagebox.showwarning("Alert", "Please focus your eyes on the screen!") 
     root.destroy()  # Destroy the hidden root window
 
 # Loop runs if capturing has been initialized
