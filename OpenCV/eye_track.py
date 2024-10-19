@@ -37,7 +37,7 @@ while True:
 
         # Region of interest for face (both color and grayscale)
         roi_gray = gray[y:y + h, x:x + w]
-        roi_color = img[y:y + h, x:x + w]
+        roi_color = img[y:y + h, x:x + w] 
 
         # Detect eyes within the face region
         eyes = eye_cascade.detectMultiScale(roi_gray)
