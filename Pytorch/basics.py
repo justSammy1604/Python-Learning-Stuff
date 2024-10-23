@@ -19,7 +19,7 @@ def loss(y, y_predicted):
 print(f'Prediction before training: f(5) = {forward(5):.3f}')
 
 learning_rate = 0.01
-n_iters = 10
+n_iters = 20
 
 for epoch in range(n_iters):
     # prediction = forward pass
