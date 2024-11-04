@@ -23,7 +23,7 @@ Y = torch.from_numpy(Y_numpy.astype(np.float32))
 
 Y = Y.view(Y.shape[0], 1)
 
-n_samples, n_features = X.shape
+n_samples, n_features = X.shape 
 
 
 # print(n_samples, n_features)
