@@ -20,7 +20,7 @@ def show_popup():
 # Loop runs if capturing has been initialized
 while True:
     # Read frames from the camera
-    ret, img = cap.read() 
+    ret, img = cap.read()   
 
     # Convert to grayscale for the face and eyes detection
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
