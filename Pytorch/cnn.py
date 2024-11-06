@@ -85,7 +85,7 @@ for epoch in range(num_epochs):
 
 print('Finished Training')
 
-dataiter = iter(testloader)
+dataiter = iter(testloader) 
 
 images, labels = next(dataiter)
 
