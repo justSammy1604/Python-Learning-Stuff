@@ -23,7 +23,7 @@ n_iters = 20
 
 for epoch in range(n_iters):
     # prediction = forward pass
-    y_pred = forward(X)
+    y_pred = forward(X) 
 
     # loss
     l = loss(Y, y_pred)
