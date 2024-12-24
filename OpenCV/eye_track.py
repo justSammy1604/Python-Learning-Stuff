@@ -33,7 +33,7 @@ while True:
 
     for (x, y, w, h) in faces:
         # Draw a rectangle around the face
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2) 
 
         # Region of interest for face (both color and grayscale)
         roi_gray = gray[y:y + h, x:x + w]
